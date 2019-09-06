@@ -28,7 +28,7 @@ function Header() {
     div.appendChild(h1);
     div.appendChild(span2);
 
-    return div;
+    document.querySelector('.header-container').appendChild(div);
 }
 
-document.querySelector('.header-container').appendChild(Header());
+Header();

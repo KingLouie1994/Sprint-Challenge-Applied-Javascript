@@ -23,7 +23,7 @@ axios.get('https://lambda-times-backend.herokuapp.com/articles')
     .then(response => {
         Object.keys(response.data.articles).forEach(element => {
             response.data.articles[element].forEach(element2 => {
-                articleHolder.appendChild(articleCreator(element2));
+                articleCreator(element2);
             });
         });
     })
@@ -31,7 +31,7 @@ axios.get('https://lambda-times-backend.herokuapp.com/articles')
         document.body.innerText = error.message;
     });
 
-let articleHolder = document.querySelector('.cards-container');
+//let articleHolder = document.querySelector('.cards-container');
 
 function articleCreator(data) {
 
@@ -57,7 +57,7 @@ function articleCreator(data) {
     divImg.appendChild(img);
     divAuthor.appendChild(span3);
 
-    return divCard;
+    document.querySelector('.cards-container').appendChild(divCard);
 }
 
 
