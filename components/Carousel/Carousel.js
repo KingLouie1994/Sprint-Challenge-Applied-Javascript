@@ -33,6 +33,11 @@ function carousel() {
   divRight.classList.add('right-button');
 
   img1.src = "./assets/carousel/mountains.jpeg";
+
+  divRight.addEventListener('click', () => {
+    img1.style.display = 'inline';
+  })
+  
   img2.src = "./assets/carousel/computer.jpeg";
   img3.src = "./assets/carousel/trees.jpeg";
   img4.src = "./assets/carousel/turntable.jpeg";
