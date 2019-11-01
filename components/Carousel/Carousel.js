@@ -20,37 +20,32 @@
 
 function carousel() {
 
-  const divCarousel = document.createElement('div');
-  const divLeft = document.createElement('div');
+  const carousel = document.createElement('div');
+  const leftBtn = document.createElement('div');
   const img1 = document.createElement('img');
   const img2 = document.createElement('img');
   const img3 = document.createElement('img');
   const img4 = document.createElement('img');
-  const divRight = document.createElement('div');
+  const rightBtn = document.createElement('div');
 
-  divCarousel.classList.add('carousel');
-  divLeft.classList.add('left-button');
-  divRight.classList.add('right-button');
+  carousel.classList.add('carousel');
+  leftBtn.classList.add('left-button');
+  rightBtn.classList.add('right-button');
 
   img1.src = "./assets/carousel/mountains.jpeg";
-
-  divRight.addEventListener('click', () => {
-    img1.style.display = 'inline';
-  })
-  
   img2.src = "./assets/carousel/computer.jpeg";
   img3.src = "./assets/carousel/trees.jpeg";
   img4.src = "./assets/carousel/turntable.jpeg";
 
-  divCarousel.appendChild(divLeft);
-  divCarousel.appendChild(img1);
-  divCarousel.appendChild(img2);
-  divCarousel.appendChild(img3);
-  divCarousel.appendChild(img4);
-  divCarousel.appendChild(divRight);
+  carousel.appendChild(leftBtn);
+  carousel.appendChild(img1);
+  carousel.appendChild(img2);
+  carousel.appendChild(img3);
+  carousel.appendChild(img4);
+  carousel.appendChild(rightBtn);
 
-  return divCarousel;
+  return carousel;
 }
 
-document.querySelector('.carousel-container').appendChild(carousel());
-
+const carouselContainer = document.querySelector('.carousel-container');
+carouselContainer.append(carousel());
